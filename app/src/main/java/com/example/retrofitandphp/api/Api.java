@@ -43,4 +43,12 @@ public interface Api {
             @Nullable @Field("lng") String lng,
             @Nullable @Field("lat") String lat
     );
+    @FormUrlEncoded
+    @POST("addImage")
+    Call<DefaultResponse> addImage(
+        @Nullable @Field("image1") String imageOne,
+        @Nullable @Field("image2") String imageTow,
+        @Nullable @Field("user_id") String userId
+
+    );
 }
